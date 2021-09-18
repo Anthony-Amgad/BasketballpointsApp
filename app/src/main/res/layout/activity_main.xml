@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/teamatag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Team A"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/teambtag"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/teambtag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Team B"
+        app:layout_constraintLeft_toRightOf="@id/teamatag"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/teamascore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="70sp"
+        app:layout_constraintLeft_toLeftOf="@id/teamatag"
+        app:layout_constraintRight_toRightOf="@id/teamatag"
+        app:layout_constraintTop_toBottomOf="@id/teamatag"
+        android:layout_marginTop="32sp"/>
+
+    <TextView
+        android:id="@+id/teambscore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="70sp"
+        app:layout_constraintLeft_toLeftOf="@id/teambtag"
+        app:layout_constraintRight_toRightOf="@id/teambtag"
+        app:layout_constraintTop_toBottomOf="@id/teambtag"
+        android:layout_marginTop="32sp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/teama3"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@drawable/roundrec"
+        android:backgroundTint="#FFA500"
+        app:layout_constraintTop_toBottomOf="@id/teamascore"
+        app:layout_constraintLeft_toLeftOf="@id/teamatag"
+        app:layout_constraintRight_toRightOf="@id/teamatag"
+        android:layout_marginTop="16dp"
+        android:text="+3"
+        android:textSize="20sp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/teama2"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@drawable/roundrec"
+        android:backgroundTint="#FFA500"
+        app:layout_constraintTop_toBottomOf="@id/teama3"
+        app:layout_constraintLeft_toLeftOf="@id/teamatag"
+        app:layout_constraintRight_toRightOf="@id/teamatag"
+        android:layout_marginTop="16dp"
+        android:text="+2"
+        android:textSize="20sp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/teama1"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@drawable/roundrec"
+        android:backgroundTint="#FFA500"
+        app:layout_constraintTop_toBottomOf="@id/teama2"
+        app:layout_constraintLeft_toLeftOf="@id/teamatag"
+        app:layout_constraintRight_toRightOf="@id/teamatag"
+        android:layout_marginTop="16dp"
+        android:text="FT"
+        android:textSize="20sp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/teamb3"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@drawable/roundrec"
+        android:backgroundTint="#FFA500"
+        app:layout_constraintTop_toBottomOf="@id/teambscore"
+        app:layout_constraintLeft_toLeftOf="@id/teambtag"
+        app:layout_constraintRight_toRightOf="@id/teambtag"
+        android:layout_marginTop="16dp"
+        android:text="+3"
+        android:textSize="20sp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/teamb2"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@drawable/roundrec"
+        android:backgroundTint="#FFA500"
+        app:layout_constraintTop_toBottomOf="@id/teamb3"
+        app:layout_constraintLeft_toLeftOf="@id/teambtag"
+        app:layout_constraintRight_toRightOf="@id/teambtag"
+        android:layout_marginTop="16dp"
+        android:text="+2"
+        android:textSize="20sp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/teamb1"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@drawable/roundrec"
+        android:backgroundTint="#FFA500"
+        app:layout_constraintTop_toBottomOf="@id/teamb2"
+        app:layout_constraintLeft_toLeftOf="@id/teambtag"
+        app:layout_constraintRight_toRightOf="@id/teambtag"
+        android:layout_marginTop="16dp"
+        android:text="FT"
+        android:textSize="20sp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/resetbtn"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@drawable/roundrec"
+        android:backgroundTint="#FFA500"
+        app:layout_constraintTop_toBottomOf="@id/teamb1"
+        app:layout_constraintLeft_toLeftOf="@id/teamatag"
+        app:layout_constraintRight_toRightOf="@id/teambtag"
+        android:layout_marginTop="32dp"
+        android:text="Reset"
+        android:textSize="20sp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
