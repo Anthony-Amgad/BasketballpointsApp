@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Basketballpoints">
         <activity
+            android:name=".WinnerActivity"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

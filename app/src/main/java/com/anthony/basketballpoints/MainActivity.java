@@ -3,6 +3,7 @@ package com.anthony.basketballpoints;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mReset = findViewById(R.id.resetbtn);
         mTAS = findViewById(R.id.teamascore);
         mTBS = findViewById(R.id.teambscore);
+
 
         mTA1.setOnClickListener(this);
         mTA2.setOnClickListener(this);
@@ -54,5 +56,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             mTBS.setText("0");
             mTAS.setText("0");
         }
+
+        if(Integer.valueOf(mTAS.getText().toString()) >= 40){
+            Intent intent = new Intent(this, WinnerActivity.class);
+            intent.putExtra("win","Team A");
+            intent.putExtra("ascore",String.valueOf(mTAS.getText()));
+            intent.putExtra("bscore",String.valueOf(mTBS.getText()));
+            startActivity(intent);
+        }else if(Integer.valueOf(mTBS.getText().toString()) >= 40){
+            Intent intent = new Intent(this, WinnerActivity.class);
+            intent.putExtra("win","Team B");
+            intent.putExtra("ascore",String.valueOf(mTAS.getText()));
+            intent.putExtra("bscore",String.valueOf(mTBS.getText()));
+            startActivity(intent);
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mTBS.setText("0");
+        mTAS.setText("0");
     }
 }
